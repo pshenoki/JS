@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function sum_(a,b){
+		return a + b;
+	}
+
+	function sub_(a,b){
+		return a - b;
+	}
+
+	function mult_(a,b){
+		return a * b;
+	}
+
+	function div_(a,b){
+		return a / b;
+	}
+	
+
+	function mathOperation(arg1, arg2, operation){
+		switch(operation){
+			case "+":
+			return(sum_(arg1,arg2));
+		case "-":
+			return(sub_(arg1,arg2));
+		case "*":
+			return(mult_(arg1,arg2));
+		case "/":
+			return(div_(arg1,arg2));
+		}
+	}
+
+	alert(mathOperation(10,2,"+"));
+	alert(mathOperation(10,2,"-"));
+	alert(mathOperation(10,2,"*"));
+	alert(mathOperation(10,2,"/"));
+
+
+</script>
