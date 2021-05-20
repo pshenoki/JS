@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert(0 == null); // false
+	// Для нестрогого равенства == значений undefined и null действует особое правило: 
+	// эти значения ни к чему не приводятся, они равны друг другу и не равны ничему другому. 
+	// Поэтому null == 0 ложно.
+
+
+	// функция работает на положительных степенях
+	function power(val, pow){
+		let mult_ = val;
+		if(pow == 0)
+			return 1;
+
+		if(pow != 1)
+			mult_ *= power(val, pow - 1)
+		return mult_
+	}
+
+	alert(power(5,3))
+</script>
