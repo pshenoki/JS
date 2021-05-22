@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	const n = 100;
+	let i = 3;
+
+	console.log(2);
+	console.log(3);
+
+	while (i++ < n){
+		let j = 2;
+		var count = true;
+		while (j < i){
+			if (i % j == 0){
+				count = false;
+				break;
+			}
+			j += 1;	
+		}
+		if (count) 
+			console.log (i);
+	}
+
+
+</script>
