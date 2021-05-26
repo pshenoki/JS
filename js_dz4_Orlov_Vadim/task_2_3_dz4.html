@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	
+	class My_object{
+		constructor (name, price, quant=1){
+		this.name = name;
+		this.price = price;
+		this.quant = quant;
+		}
+
+		get_name(){
+			return this.name;
+		}
+		get_all_price(){
+			return (this.price * this.quant);
+		}
+	}
+
+	class Basket{            // пока не реализован метод двух одинаковых обьектов
+		constructor(basket_arr=[]){
+			this.basket_arr = basket_arr;
+		}
+		add_obj(obj){
+			this.basket_arr.push(obj);
+			console.log("В корзину добавлен товар " + obj.get_name()); 
+		}
+		show_basket(){
+			console.log(...this.basket_arr);
+		}
+
+		count_price(){
+			let basket_full_price = 0;
+			for (let good of this.basket_arr){
+				basket_full_price += good.get_all_price();
+			}
+			console.log("Полная стоймость корзины: ");
+			return basket_full_price;
+		}
+
+	}
+
+
+	let ob1 = new My_object("pen", 100, 10);  // создаем объекты
+	let ob2 = new My_object("paper", 200, 20);
+	let ob3 = new My_object("pencil", 10);
+	
+
+	let my_basket = new Basket(); // создаем корзину
+	my_basket.add_obj(ob1);		  // добавляем объекты и смотрим, что там					
+	my_basket.add_obj(ob2);
+	my_basket.add_obj(ob3);
+	my_basket.show_basket();
+	
+	console.log(my_basket.count_price()); // считаем полную стоймость
+	
+
+	
+</script>

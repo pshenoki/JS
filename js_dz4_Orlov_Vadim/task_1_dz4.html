@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	
+	
+	
+	function numb_arr(str_numb){ //создаем массив из цифр
+	let my_arr = [];
+	for ( let i = 0; i < str_numb.length; my_arr.push(parseInt(str_numb[i])), i++ );
+	return my_arr.reverse();
+		}
+
+
+	function compare(x_int){   // проверяем интервал от 0 до 999
+		if (x_int <= 999 & x_int >= 0){
+			return String(x_int);
+		}
+		else {
+			console.log("входные параметры неверны");
+			return {};
+		}
+	}
+	
+	function Numbers(units, tens=0, hundreds=0){  // создаем объект
+		if (units >= 0){
+
+			this.units = units;
+			this.tens = tens;
+			this.hundreds = hundreds;
+		}
+		else {
+			return {};
+		}
+	}
+
+
+
+
+	let my_arr = [1, 234, 44, -12, 2000, 50, 888]; // массив чисел (int)
+
+
+	for (let numb of my_arr){
+		console.log(new Numbers(...numb_arr(compare(numb))));
+	}
+
+	
+</script>
